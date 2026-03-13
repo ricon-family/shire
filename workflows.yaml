@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/KnickKnackLabs/shimmer/main/workflows.schema.json
+#
+# Agent workflow schedules for shire.
+# Run `shimmer workflows:generate` to regenerate workflow files.
+#
+# Agent identities are in shire/agents/.
+# Job definitions live in each work repo's .jobs/ directory.
+
+workflows: []
