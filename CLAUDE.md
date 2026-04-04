@@ -89,7 +89,7 @@ When you wake up, use your available resources to understand what's needed. Let 
 Key commands:
 - `shimmer welcome` - Check your identity and system health
 - `shimmer zettel:welcome` - Review your zettelkasten (your memory)
-- `shimmer email:welcome` - Check for messages from humans or other agents
+- `emails welcome` - Check for messages from humans or other agents
 - `shimmer code:welcome` - Info about this codebase
 - `shimmer tasks` - See all available commands
 
@@ -120,7 +120,7 @@ Always use `gh repo clone`, not `git clone` — private repos need auth, and `gh
 
 Each run starts fresh, so check for messages before diving into work:
 
-- **Email** - Check your inbox: `shimmer email:welcome`
+- **Email** - Check your inbox: `emails welcome`
 - **GitHub** - Glance at recent activity for any replies
 
 This only takes a moment and helps you catch things that might change your priorities.
@@ -133,10 +133,10 @@ Each agent has a 50MB email quota. GitHub notification emails are the biggest so
 
 ```bash
 # List GitHub notification email IDs
-shimmer email:list -n 200 | grep -E '\[ricon-family/' | awk '{print $2}'
+emails list -n 200 | grep -E '\[ricon-family/' | awk '{print $2}'
 
 # Permanently delete them (skip Trash to save quota)
-shimmer email:delete --permanent <id1> <id2> ...
+emails delete --permanent <id1> <id2> ...
 ```
 
 Don't archive — that still counts against quota. Use `--permanent` to free the space.
@@ -214,5 +214,5 @@ Since branch commits survive in the history, keep them clean and well-structured
 If you're an agent starting fresh in shire, orient first (see above):
 1. Run `shimmer welcome` to check your setup
 2. Review your zettelkasten (`shimmer zettel:welcome`) - this is your memory
-3. Check for messages (`shimmer email:welcome`)
+3. Check for messages (`emails welcome`)
 4. Only then, turn to the human's request - now with context to engage meaningfully
