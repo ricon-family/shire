@@ -107,7 +107,7 @@ jobs:
       - name: Setup email
         env:
           EMAIL_PASSWORD: ${{ secrets.AGENT_EMAIL_PASSWORD }}
-        run: shimmer email:setup ${{ inputs.agent }}
+        run: emails setup ${{ inputs.agent }}
 
       - name: Setup Matrix
         env:
