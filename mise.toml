@@ -2,4 +2,4 @@
 shiv = "https://github.com/KnickKnackLabs/vfox-shiv"
 
 [tools]
-"shiv:emails" = "0.1.0"
+"shiv:emails" = "0.2.0"
